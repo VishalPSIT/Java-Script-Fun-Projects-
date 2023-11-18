@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project 1</title>
+    <title>project 1(password generator) </title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <div id="wrapper">
+
+        <h1>Password Generator</h1>
+
+        <div class="display-container">
+            
+            <input readonly placeholder="Password" class="display" data-passwordDisplay >
+            <button>
+
+                <span data-copyMsg></span>
+                <img src="./assets/opy.svg" alt="copy text">
+
+            </button>
+
+
+        </div>
+
+        <div class="input-container">
+            <p>Password Length</p>
+            <p data-length>0</p>
+        </div>
+
+        <input type="range" min="1" max="16" step="1" data-lengthSlider>
+
+        <div type="checkbox" class="uppercase">
+            <input type="checkbox" name="NA" id="uppercase">
+            <label for="uppercase">Includes Uppercase letters</label>
+        </div>
+        <div type="checkbox" class="Lowercase">
+            <input type="checkbox" name="NA" id="uppercase">
+            <label for="uppercase">Includes Lowercase letters</label>
+        </div>
+        <div type="checkbox" class="Numbers">
+            <input type="checkbox" name="NA" id="uppercase">
+            <label for="uppercase">Includes Numbers </label>
+        </div>
+        <div type="checkbox" class="uppercase">
+            <input type="checkbox" name="NA" id="uppercase">
+            <label for="uppercase">Includes Symbols</label>
+        </div>
+
+        <div class="strength-container">
+            <p>Strength</p>
+            <div data-indicator></div>
+        </div>
+
+        <button data-createPassword>
+            GENERATE PASSWORD
+        </button>
+
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
