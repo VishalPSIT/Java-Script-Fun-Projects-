@@ -11,4 +11,14 @@ const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector("[data-createPassword]");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 
+let password="";
+let passwordLength = 10 ;
+let checkCount = 1 ; 
+
+function handleSlider() {
+    inputSlider.value = passwordLength;
+    lengthDisplay.innerText = 10;
+}
+handleSlider();
+
 
