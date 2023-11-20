@@ -10,15 +10,39 @@ const symbolCheck = document.querySelector("#symbols");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector("[data-createPassword]");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
-
+const symbols = "!@#$%&~"
 let password="";
 let passwordLength = 10 ;
 let checkCount = 1 ; 
 
 function handleSlider() {
     inputSlider.value = passwordLength;
-    lengthDisplay.innerText = 10;
+    lengthDisplay.innerText = passwordLength;
 }
 handleSlider();
+
+function setIndicator(color){
+    indicator.style.backgroundColor = color;
+
+}
+
+function getRandomInteger(min , max){
+    return Math.floor(Math.random() * (max - min))+min;
+}
+function generateRandomNumber(){
+    return getRandomInteger(0,9);
+
+}
+function generateLowerCase(){
+    return String.fromCharCode(getRandomInteger(97,123));
+}
+function getUpperCase(){
+    return String.fromCharCode(getRandomInteger(65,91));
+}
+function generateSymbol(){
+    const randNumb= getRandomInteger(0 , symbols.length);
+    return symbols.charAt[randNumb];
+}
+
 
 
